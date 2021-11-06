@@ -3,6 +3,8 @@ from time import sleep
 import requests
 import json
 
+http://ldap.makerspace.local:1880/cometcard?cometcard=0852665168
+
 userVerificationUrl = "localhost:8080/{user}/"
 someId = ""
 
