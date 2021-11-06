@@ -1,9 +1,9 @@
-from gpiozero import LED
+# from gpiozero import LED
 from time import sleep
 import requests
 import json
 
-userVerificationUrl = "http://ldap.makerspace.local:1880/cometcard?cometcard={user}"
+userVerificationUrl = "http://192.168.1.112:1880/cometcard?cometcard={user}"
 someId = ""
 
 def unlock():
