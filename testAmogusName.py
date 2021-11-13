@@ -1,4 +1,5 @@
 import usb.core
+import time
 
 device=usb.core.find(idVendor=0x413d,idProduct=0x2107)
 
@@ -11,3 +12,4 @@ device.set_configuration()
 
 while True:
     print(endpoint.bEndpointAddress, endpoint.wMaxPacketSize)
+    time.sleep(10)
