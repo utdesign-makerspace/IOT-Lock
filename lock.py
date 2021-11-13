@@ -1,5 +1,6 @@
 # from gpiozero import LED
 from time import sleep
+import usb.core
 #import requests
 #import json
 
