@@ -10,6 +10,14 @@ if device.is_kernel_driver_active(0):
 
 device.set_configuration()
 
+data = None
 while True:
-    print(device.read(endpoint.bEndpointAddress, endpoint.wMaxPacketSize))
-    time.sleep(10)
+    try:
+        data = device.read(endpoint.bEndpointAddress,
+                           endpoint.wMaxPacketSize)
+    except usb.core.USBError as e:
+        data = None
+        if e.args == ('Operation timed out',):
+            continue
+    print(data)
+    time.sleep(1)
