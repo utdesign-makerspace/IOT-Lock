@@ -1,4 +1,4 @@
-from pyusb import usb.core
+import pyusb.core
 
 dev=usb.core.find(idVendor=0x413d,idProduct=0x2107)
 ep=dev[0].interfaces()[0].endpoints()[0]
