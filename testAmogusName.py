@@ -11,5 +11,5 @@ if device.is_kernel_driver_active(0):
 device.set_configuration()
 
 while True:
-    print(endpoint.bEndpointAddress, endpoint.wMaxPacketSize)
+    print(device.read(endpoint.bEndpointAddress, endpoint.wMaxPacketSize))
     time.sleep(10)
