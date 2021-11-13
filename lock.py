@@ -1,10 +1,11 @@
 # from gpiozero import LED
 from time import sleep
-import requests
-import json
+from os import in
+#import requests
+#import json
 
-userVerificationUrl = "http://192.168.1.112:1880/cometcard?cometcard={user}"
-someId = ""
+#userVerificationUrl = "http://192.168.1.112:1880/cometcard?cometcard={user}"
+#someId = ""
 
 def unlock():
     print("We unlocked")
@@ -13,14 +14,16 @@ def lock():
     print("We locked")
 
 while True:
-    cardId = input()
-    requestUrl = userVerificationUrl.replace("{user}",cardId)
-    response = requests.get(requests)
+    cardId = input("Test")
 
-    responseJson = json.loads(response.content)
+    print(f'You entered {cardId}')
+    #requestUrl = userVerificationUrl.replace("{user}",cardId)
+    #response = requests.get(requests)
 
-    if response == responseJson["success"] :
-        unlock()
-        sleep(2)
-        lock()
+    #responseJson = json.loads(response.content)
+
+    #if response == responseJson["success"] :
+        #unlock()
+        #sleep(2)
+        #lock()
 
