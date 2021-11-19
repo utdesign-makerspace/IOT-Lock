@@ -14,6 +14,7 @@ if device.is_kernel_driver_active(0):
 device.set_configuration()
 
 data = None
+RxData = None
 while True:
     try:
         data = device.read(endpoint.bEndpointAddress,
