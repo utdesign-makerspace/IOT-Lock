@@ -13,7 +13,7 @@ if device is None:
 
 device.set_configuration()
 
-cfg = dev.get_active_configuration()
+cfg = device.get_active_configuration()
 intf = cfg[(0,0)]
 
 ep = usb.util.find_descriptor(
