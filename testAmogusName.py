@@ -18,7 +18,7 @@ RxData = None
 while True:
     try:
         data = device.read(endpoint.bEndpointAddress,
-                           endpoint.wMaxPacketSize)
+                           64)
         #RxData = ''.join([chr(x) for x in data])
     except usb.core.USBError as e:
         data = None
