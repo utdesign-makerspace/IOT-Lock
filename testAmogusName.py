@@ -18,11 +18,11 @@ RxData = None
 while True:
     try:
         data = device.read(endpoint.bEndpointAddress,
-                           endpoint.wMaxPacketSize).tobytes()
-        RxData = ''.join([chr(x) for x in data])
+                           endpoint.wMaxPacketSize)
+        #RxData = ''.join([chr(x) for x in data])
     except usb.core.USBError as e:
         data = None
         if e.args == ('Operation timed out',):
             continue
-    print(RxData)
+    print(data)
     #time.sleep(1)
