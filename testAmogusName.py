@@ -25,4 +25,4 @@ while True:
         if e.args == ('Operation timed out',):
             continue
     print(RxData)
-    time.sleep(1)
+    #time.sleep(1)
